@@ -1,2 +1,3 @@
-# sunflower-note_1
-Exported from Caffeine project: Sunflower Note
+## Sunflower Note
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

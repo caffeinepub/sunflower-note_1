@@ -1,0 +1,14 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods.",
+  "feature_evidence.json": "Feature report mapping product requirements to frontend files and components.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing the purpose of each frontend file.",
+  "frontend/index.css": "Tailwind‑based global style layer defining theme variables and dark mode tokens.",
+  "frontend/index.html": "HTML shell loading Inter font and mounting the React app entrypoint.",
+  "frontend/src/App.tsx": "Main React page showing animated sunflower hero, note overlay interaction, and footer.",
+  "frontend/src/hooks/useActor.ts": "Hook creating and managing authenticated or anonymous backend actors via React Query.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context and hooks for managing Internet Identity authentication and persistence.",
+  "frontend/src/index.css": "Global styles including Inter font, background, animations, blur, and glassmorphism utilities.",
+  "frontend/src/main.tsx": "React entrypoint wiring up providers and rendering the App component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration enabling dark mode, custom fonts, color tokens, animations, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project metadata describing a minimalist responsive site with a sunflower hero image, glassmorphic note overlay, features list, and pending feature requests."
+}

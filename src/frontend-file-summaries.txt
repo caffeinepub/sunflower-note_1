@@ -1,0 +1,6 @@
+{
+  "frontend/index.html": "HTML entry point that loads Inter font from Google Fonts and mounts the React app.",
+  "frontend/src/index.css": "Global styles with #FAFAFA background, Inter font family, breathing animation keyframes, glassmorphism utilities, and smooth fade transitions for the note overlay.",
+  "frontend/src/App.tsx": "Single-page component displaying a centered sunflower bouquet hero with breathing animation, clickable image and \"Open Note\" button that triggers a glassmorphism overlay card with the birthday message, and a footer with attribution.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Inter as the primary sans-serif font family."
+}

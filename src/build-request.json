@@ -1,0 +1,128 @@
+{
+  "kind": "build_request",
+  "title": "Minimalist single-page bouquet hero with glassmorphism note overlay",
+  "projectName": "Sunflower Note",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a minimalist, responsive single-page layout with a solid #FAFAFA background and centered hero content that adapts well to mobile, tablet, and desktop viewports.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a minimalist, responsive single-page website.\nBackground: A solid, clean #FAFAFA (off-white) background."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page background is #FAFAFA.",
+        "Hero section is centered both horizontally and vertically on common viewport sizes.",
+        "Layout remains usable and visually balanced on mobile widths (~375px) and large desktop widths (>=1440px)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a large, realistic photographic sunflower bouquet hero image centered on the screen, and apply a subtle CSS breathing animation that smoothly scales the image by approximately 1%–2% in a loop.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "The Hero Image: Place a large, realistic photographic sunflower bouquet in the center of the screen. Add a very subtle CSS 'breathing' animation to the image so it scales slightly (1% to 2%) to make it feel premium."
+        ]
+      },
+      "acceptanceCriteria": [
+        "A sunflower bouquet photo is displayed as the primary centered hero image.",
+        "The hero image uses a smooth looping scale animation between ~1.01 and ~1.02 (or equivalent subtle range) without jarring transitions."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement interaction so that clicking the bouquet image or clicking a small \"Open Note\" button opens a centered overlay note card above the bouquet.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "When the user clicks the bouquet or a small 'Open Note' button, a minimalist card should appear centered over the bouquet."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking the bouquet opens the note card.",
+        "Clicking the \"Open Note\" button opens the note card.",
+        "When open, the note card is centered over the hero content."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Style the note card using minimalist glassmorphism: translucent frosted glass effect (backdrop-filter blur(10px)), thin semi-transparent white border, soft rounded corners, centered text, and generous line spacing. Use a clean modern sans-serif font (Inter or Montserrat).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Style: The card should have a translucent, frosted glass effect (backdrop-filter: blur(10px)), a thin white semi-transparent border, and soft rounded corners.\nTypography: Use a clean, modern sans-serif font like 'Inter' or 'Montserrat'. Use generous line-spacing and center-align the text."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Note card visually shows a frosted glass look via backdrop blur ~10px.",
+        "Card has a thin white semi-transparent border and rounded corners.",
+        "Text inside the card is center-aligned with generous line spacing.",
+        "App uses Inter or Montserrat as the primary sans-serif font (loaded via a web font or equivalent)."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Display the provided note content exactly within the note card, and when the note is open, slightly blur the bouquet/background behind the card to keep focus on the message; ensure transitions feel fluid and elegant.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "The Note Content: > * 'Amrutaaa 🤍\nHBD brooo… you deserve the absolute best always ...... Stay hot and unhinged 🍻✨\nCheers, your favorite person,\nRֶָ֢achel'\nVibe: The interaction should be fluid and elegant. When the note appears, the sunflowers should slightly blur in the background to keep the focus on the message."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The note card shows the message text exactly as provided (including punctuation, line breaks, and emojis).",
+        "When the note opens, the hero image/background behind it becomes slightly blurred.",
+        "Opening/closing the note uses smooth transitions (no abrupt popping)."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add the required generated hero image as a static asset under frontend/public/assets/generated and render it in the hero section.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Place a large, realistic photographic sunflower bouquet in the center of the screen."
+        ]
+      },
+      "acceptanceCriteria": [
+        "A generated image file exists under frontend/public/assets/generated and is used by the hero image component.",
+        "The app loads the hero image without requiring any backend calls."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths (frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui) must not be modified."
+  ],
+  "nonGoals": [
+    "No backend canister logic is required for this single-page note experience.",
+    "No multi-page routing, authentication, or persistent storage is included unless explicitly requested later."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Realistic photographic sunflower bouquet, centered composition, clean studio-like lighting, premium feel (sunflower-bouquet-hero.dim_1600x1600.png)"
+    ],
+    "edits": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Minimalist responsive single-page website with centered realistic sunflower bouquet hero image, subtle breathing animation, and a click-to-open glassmorphism note overlay that blurs the background.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Realistic photographic sunflower bouquet, centered composition, clean studio-like lighting, premium feel (sunflower-bouquet-hero.dim_1600x1600.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-minimalist-responsive-single-page-layout-with-a-solid-fafafa-background-and-centered-hero-content-that-adapts-well-to-mobile-tablet-and-desktop-viewports",
+      "title": "Create a minimalist, responsive single-page layout with a solid #FAFAFA background and centered hero content that adapts well to mobile, tablet, and desktop viewports.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-large-realistic-photographic-sunflower-bouquet-hero-image-centered-on-the-screen-and-apply-a-subtle-css-breathing-animation-that-smoothly-scales-the-image-by-approximately-1-2-in-a-loop",
+      "title": "Add a large, realistic photographic sunflower bouquet hero image centered on the screen, and apply a subtle CSS breathing animation that smoothly scales the image by approximately 1%–2% in a loop.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-interaction-so-that-clicking-the-bouquet-image-or-clicking-a-small-open-note-button-opens-a-centered-overlay-note-card-above-the-bouquet",
+      "title": "Implement interaction so that clicking the bouquet image or clicking a small \"Open Note\" button opens a centered overlay note card above the bouquet.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-style-the-note-card-using-minimalist-glassmorphism-translucent-frosted-glass-effect-backdrop-filter-blur-10px-thin-semi-transparent-white-border-soft-rounded-corners-centered-text-and-generous-line-spacing-use-a-clean-modern-sans-serif-font-inter-or-montserrat",
+      "title": "Style the note card using minimalist glassmorphism: translucent frosted glass effect (backdrop-filter blur(10px)), thin semi-transparent white border, soft rounded corners, centered text, and generous line spacing. Use a clean modern sans-serif font (Inter or Montserrat).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-provided-note-content-exactly-within-the-note-card-and-when-the-note-is-open-slightly-blur-the-bouquet-background-behind-the-card-to-keep-focus-on-the-message-ensure-transitions-feel-fluid-and-elegant",
+      "title": "Display the provided note content exactly within the note card, and when the note is open, slightly blur the bouquet/background behind the card to keep focus on the message; ensure transitions feel fluid and elegant.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-generated-hero-image-as-a-static-asset-under-frontend-public-assets-generated-and-render-it-in-the-hero-section",
+      "title": "Add the required generated hero image as a static asset under frontend/public/assets/generated and render it in the hero section.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a minimalist, responsive single-page website with #FAFAFA background and modern sans-serif typography (Inter or Montserrat).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add centered large realistic photographic sunflower bouquet hero image with subtle CSS breathing (scale 1–2%) animation.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement interaction: clicking bouquet or an 'Open Note' button opens a centered glassmorphism note card overlay.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Style note card with frosted glass (backdrop-filter blur ~10px), thin semi-transparent white border, soft rounded corners, centered text, generous line spacing.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Display provided note content and, when note is open, slightly blur sunflowers/background to focus on the message; keep animations fluid and elegant.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Sunflower Note",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

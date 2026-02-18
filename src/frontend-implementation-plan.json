@@ -1,0 +1,132 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Sunflower Note — single-page bouquet hero with glassmorphism note overlay",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a minimalist responsive single-page layout with #FAFAFA background and centered hero content across viewport sizes.",
+      "acceptanceCriteria": [
+        "Page background is #FAFAFA.",
+        "Hero section is centered both horizontally and vertically on common viewport sizes.",
+        "Layout remains usable and visually balanced on mobile widths (~375px) and large desktop widths (>=1440px)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Implement the single-page centered hero layout (full-viewport centering with responsive sizing) and mount the hero content as the only page."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define global styles to enforce the solid #FAFAFA background and baseline responsive layout behavior (e.g., body/root sizing)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Render the centered sunflower bouquet hero image and apply a subtle looping breathing scale animation (~1%–2%).",
+      "acceptanceCriteria": [
+        "A sunflower bouquet photo is displayed as the primary centered hero image.",
+        "The hero image uses a smooth looping scale animation between ~1.01 and ~1.02 (or equivalent subtle range) without jarring transitions."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Render the hero image (from the generated static asset) and apply a subtle breathing animation to the image element while maintaining centered composition."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add the CSS keyframes/class for the breathing animation (smooth scale loop in the ~1.01–1.02 range)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add interactions so clicking the bouquet image or an \"Open Note\" button opens a centered overlay note card above the bouquet.",
+      "acceptanceCriteria": [
+        "Clicking the bouquet opens the note card.",
+        "Clicking the \"Open Note\" button opens the note card.",
+        "When open, the note card is centered over the hero content."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add UI state and handlers so both the hero image and a small \"Open Note\" button toggle the overlay note card; ensure the overlay is centered above the hero."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Style the overlay note card with minimalist glassmorphism and modern sans-serif typography (Inter or Montserrat).",
+      "acceptanceCriteria": [
+        "Note card visually shows a frosted glass look via backdrop blur ~10px.",
+        "Card has a thin white semi-transparent border and rounded corners.",
+        "Text inside the card is center-aligned with generous line spacing.",
+        "App uses Inter or Montserrat as the primary sans-serif font (loaded via a web font or equivalent)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Load the chosen web font (Inter or Montserrat) so the app uses it as the primary sans-serif."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Apply the primary font family globally and add glassmorphism styling utilities/classes for the note card (backdrop-filter blur(10px), thin semi-transparent border, rounded corners, centered text, generous line spacing)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply the glassmorphism card styling to the overlay note card container and ensure typography/spacing match the minimalist spec."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Show the provided note text exactly and blur the bouquet/background behind the card when open with smooth open/close transitions.",
+      "acceptanceCriteria": [
+        "The note card shows the message text exactly as provided (including punctuation, line breaks, and emojis).",
+        "When the note opens, the hero image/background behind it becomes slightly blurred.",
+        "Opening/closing the note uses smooth transitions (no abrupt popping)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Insert the provided note content exactly (preserving line breaks and emojis) into the overlay; when open, apply a slight blur to the underlying hero/background and add smooth transitions for opening/closing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS transition styles for the overlay/card appearance (opacity/transform) and for background blur changes to keep the interaction fluid and elegant."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add the required generated hero image under frontend/public/assets/generated and render it as the hero image without backend calls.",
+      "acceptanceCriteria": [
+        "A generated image file exists under frontend/public/assets/generated and is used by the hero image component.",
+        "The app loads the hero image without requiring any backend calls."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/sunflower-bouquet-hero.dim_1600x1600.png",
+          "operation": "create",
+          "description": "Add the generated static hero image asset at the required path and filename for direct frontend loading."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the hero image to use the static asset at frontend/public/assets/generated/sunflower-bouquet-hero.dim_1600x1600.png (no backend calls)."
+        }
+      ]
+    }
+  ]
+}
